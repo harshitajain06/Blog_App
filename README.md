@@ -26,7 +26,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Catalog of my things <a name="about-project"></a>
+# 📖 My Blog App <a name="about-project"></a>
 
 > The Blog app is a classic example of a blog website. It is a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
@@ -51,7 +51,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 💻 Getting Started with ruby-catalog <a name="getting-started"></a>
+## 💻 Getting Started with Blog_App <a name="getting-started"></a>
 > To get a local copy up and running, follow these steps.
 
 ### Prerequisites
