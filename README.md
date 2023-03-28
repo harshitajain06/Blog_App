@@ -150,5 +150,5 @@ We would like to thank Microverse for providing the reading materials that aided
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/harshitajain06/Blog_App/blob/data_model/MIT.md) licensed.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
