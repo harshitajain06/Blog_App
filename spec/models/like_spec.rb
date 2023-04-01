@@ -9,7 +9,7 @@ RSpec.describe Like, type: :model do
   end
 
   it 'have correct post' do
-    expect(@like.posts_id).to eq(@post.id)
+    expect(@like.post_id).to eq(@post.id)
   end
 
   it 'test if like counter is updated' do
