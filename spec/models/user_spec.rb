@@ -24,7 +24,7 @@ RSpec.describe User, type: :model do
     Post.create(title: 'title', text: 'content', author: @user, comments_counter: 0, likes_counter: 0)
     Post.create(title: 'title_1', text: 'content_1', author: @user, comments_counter: 0, likes_counter: 0)
     Post.create(title: 'title_2', text: 'content_2', author: @user, comments_counter: 0, likes_counter: 0)
-    Post.create(title: 'title_3', text: 'content_3', author: @user, comments_counter: 0, likes_counter: 0)
+    Post.create(title: 'title_4', text: 'content_3', author: @user, comments_counter: 0, likes_counter: 0)
     expect(@user.recent_posts.count).to eq(3)
   end
 end
