@@ -11,7 +11,7 @@ class Post < ApplicationRecord
   after_save :update_post_counter
 
   def update_post_counter
-    author.update(posts_counter: Post.where(author_id: author.id).count)
+    author.update(post_counter: Post.where(author_id: author.id).count)
   end
 
   def recent_comments
