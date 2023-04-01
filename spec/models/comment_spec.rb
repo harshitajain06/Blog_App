@@ -12,7 +12,7 @@ RSpec.describe Comment, type: :model do
   end
 
   it 'have correct post' do
-    expect(@comment.post_id).to eq(@post.id)
+    expect(@comment.posts_id).to eq(@post.id)
   end
 
   it 'test if comment counter is updated' do
