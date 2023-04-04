@@ -17,4 +17,21 @@ RSpec.describe 'Posts', type: :request do
       expect(response.body).to include('Here is a list of posts for a given user')
     end
   end
+  describe 'GET /show' do
+
+    it 'returns a successful response' do
+      get '/users/:user_id/posts/:post_id/'
+      expect(response).to be_successful
+    end
+
+    it 'renders the correct template' do
+      get '/users/:user_id/posts/:post_id/'
+      expect(response).to render_template(:show)
+    end
+
+    it 'includes correct placeholder text in the response body' do
+      get '/users/:user_id/posts/:post_id/'
+      expect(response.body).to include('Selected post for a given user')
+    end
+  end
 end
