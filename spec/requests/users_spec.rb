@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :request do
-  describe "GET /index" do
+RSpec.describe 'Users', type: :request do
+  describe 'GET /index' do
     it 'returns a successful response' do
       get '/users'
       expect(response).to be_successful
@@ -16,6 +16,5 @@ RSpec.describe "Users", type: :request do
       get '/users'
       expect(response.body).to include('All the users')
     end
-
-end
+  end
 end

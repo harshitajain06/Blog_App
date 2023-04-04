@@ -1,8 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
-  describe "GET /index" do
-   
+RSpec.describe 'Posts', type: :request do
+  describe 'GET /index' do
     it 'returns a successful response' do
       get '/users/:user_id/posts'
       expect(response).to be_successful
