@@ -18,7 +18,6 @@ RSpec.describe 'Posts', type: :request do
     end
   end
   describe 'GET /show' do
-
     it 'returns a successful response' do
       get '/users/:user_id/posts/:post_id/'
       expect(response).to be_successful

@@ -19,7 +19,6 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET /show' do
-
     it 'returns a successful response' do
       get '/users/:id/'
       expect(response).to be_successful
