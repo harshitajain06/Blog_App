@@ -10,7 +10,11 @@
     <p class="post-text"> <%= flash[:notice] %> </p>
     <h1 class="post-text"> <%= @post.title %> </h1>
     <p class="post-text"> <%= @post.text %> </p>
-   
+    <div>
+      <%= form_with model: @like, url:  user_post_likes_path(@user, @post) do |form|%>
+          <%= form.submit 'Like post', class: 'submit' %>
+        <%end%>
+    </div>
 
   <ul class="comment d-flex-2 border">
     Comments:
@@ -21,5 +25,5 @@
 </section>
 
 <button class="see-all-post d-flex border">
-    
+    <%= link_to "Create new comment", new_user_post_comment_path(@user, @post) %>
 </button>
