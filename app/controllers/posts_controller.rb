@@ -19,11 +19,10 @@ class PostsController < ApplicationController
   def create
     @user = current_user
     @post = Post.new(author: @user, title: params[:post][:title], text: params[:post][:text])
-    @post.save
     if @post.save
       @post.update_post_counter
       flash[:notice] = 'Your post was created successfully'
-      redirect_to user_path(@user)
+      redirect_to user_post_path(@user, @post)
     else
       flash.alert = 'sorry, something went wrong!'
       render :new
