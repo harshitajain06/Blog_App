@@ -23,7 +23,7 @@ default: &default
   host: localhost
   username: postgres
   password: coding@1
-  database: Blog_App_development
+  database: vlog
 
 development:
   <<: *default
