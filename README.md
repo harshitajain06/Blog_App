@@ -96,6 +96,13 @@ Run tests with:
 - GitHub: [@harshita](https://github.com/harshitajain06/)
 - LinkedIn: [@harshita](https://www.linkedin.com/in/harshitajain06/)
 
+👤 **Maaloum**
+
+- GitHub: [@githubhandle](https://github.com/maaloum)
+- Twitter: [@twitterhandle](https://twitter.com/maaloum)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/maaloum/)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
