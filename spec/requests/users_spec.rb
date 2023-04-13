@@ -5,7 +5,7 @@ RSpec.describe 'Users', type: :request do
     before(:example) do
       @user = User.create(name: 'Dev', photo: 'myPhoto', bio: 'myBio', post_counter: 0)
     end
-  
+
     it 'returns a successful response' do
       get '/users'
       expect(response).to be_successful
@@ -27,7 +27,7 @@ RSpec.describe 'Users', type: :request do
       @user = User.create(name: 'Dev', photo: 'myPhoto', bio: 'myBio', post_counter: 0)
       get user_path(@user)
     end
-  
+
     it 'returns a successful response' do
       get user_path(@user)
       expect(response).to be_successful
