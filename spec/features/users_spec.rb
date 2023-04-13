@@ -61,7 +61,8 @@ RSpec.describe 'User', type: :feature do
     end
 
     it 'shows the user first 3 posts' do
-      expect(page.find_all('li').length).to eq(5)
+      visit user_path(@user)
+      expect(page.find_all('li h3').length).to eq(3)
     end
 
     it 'redirects to the post show page when a post is clicked' do
