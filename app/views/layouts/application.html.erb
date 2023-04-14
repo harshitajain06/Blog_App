@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>BlogApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +14,30 @@
   </head>
 
   <body>
+  <nav class="sticky-top navbar-dark bg-blue py-2 px-2">
+  <ul class="nav-list d-flex align-items-center justify-content-between mb-0 list-unstyled">
+    <li class="navbar-brand">
+      <%= link_to "Blog App" , root_path, class: "home-blog" %>
+    </li>
+    <div class="d-flex align-items-center justify-content-around">
+      <% if user_signed_in? %>
+        <li class="fs-6"> Welcome <span style="">
+            <%= current_user.name.capitalize %>
+          </span></li>
+        <li class="fs-6">
+          <%= button_to "Log Out" , destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary " %>
+        </li>
+        <% else %>
+          <li class="fs-6">
+            <%= link_to "Sign In" , new_user_session_path, class: "btn btn-outline-secondary " %>
+          </li>
+          <li class="fs-6">
+            <%= link_to "Sign Up" , new_user_registration_path, class: "btn btn-outline-secondary " %>
+          </li>
+          <% end %>
+    </div>
+  </ul>
+</nav>
   <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>
