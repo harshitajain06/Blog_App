@@ -77,4 +77,5 @@ end
 
 gem 'bullet', group: 'development'
 
+gem 'cancancan'
 gem 'devise'
