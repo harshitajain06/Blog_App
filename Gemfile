@@ -78,3 +78,4 @@ end
 gem 'bullet', group: 'development'
 
 gem 'devise'
+gem 'cancancan'
