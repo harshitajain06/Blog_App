@@ -6,21 +6,22 @@
         <span class="comments mr-sm sp-fs">Comments: <%= @post.comments_counter || 0 %>, </span>
         <span class="likes sp-fs">Likes: <%= @post.likes_counter || 0 %> </span>
       </div>
-    </div>
+    </div class="d-flex">
     <p class="post-text"> <%= flash[:notice] %> </p>
     <h1 class="post-text"> <%= @post.title %> </h1>
     <p class="post-text"> <%= @post.text %> </p>
     <div>
-    <span>
+    
       <%= form_with model: @like, url:  user_post_likes_path(@user, @post) do |form|%>
           <%= form.submit 'Like post', class: 'submit' %>
         <%end%>
-        </span>
- 
+        
+        
         <% if can? :destroy, @post %>
         <%= form_with url: user_post_path(@user, @post), method: :delete, data: { confirm: 'Are you sure?' } do %>
           <button class="delete-button">Delete</button>
         <% end %>
+       
   <% end %>
  
     </div>
