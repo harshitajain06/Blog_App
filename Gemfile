@@ -78,4 +78,3 @@ end
 gem 'bullet', group: 'development'
 
 gem 'devise'
-
