@@ -16,13 +16,13 @@
           <%= form.submit 'Like post', class: 'submit' %>
         <%end%>
         </span>
-        <span>
+ 
         <% if can? :destroy, @post %>
         <%= form_with url: user_post_path(@user, @post), method: :delete, data: { confirm: 'Are you sure?' } do %>
           <button class="delete-button">Delete</button>
         <% end %>
   <% end %>
-        </span>
+ 
     </div>
 
   <ul class="comment d-flex-2 border">
